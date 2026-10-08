@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="KIA avtomobillari — zamonaviy dizayn, texnologiya va harakat ilhomi.">
+<title>KIA — Harakat ilhomlantiradi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/lucide@latest"></script>
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:#0a0a0a}*{box-sizing:border-box}::selection{background:#b91c1c;color:#fff}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeInDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}@keyframes modalIn{from{opacity:0;transform:scale(.95) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.hero-slide{transition:opacity 1.5s ease-in-out,transform 5s ease-out}.car-card{animation:fadeInUp .6s ease-out both}.modal-in{animation:modalIn .4s ease-out both}.nav-glass{background:rgba(10,10,10,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}.hero-vignette{background:linear-gradient(to bottom,rgba(0,0,0,.65),rgba(0,0,0,.25) 45%,rgba(0,0,0,.9))}.card-image-overlay{background:linear-gradient(to top,#171717,transparent 70%)}.modal-scroll{scrollbar-width:thin}
+</style></head>
+<body class="min-h-screen bg-neutral-950 text-white">
+<nav id="navbar" class="fixed left-0 right-0 top-0 z-40 border-b border-white/10 nav-glass transition-transform duration-300"><div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"><button onclick="scrollToTop()" class="text-xl font-black tracking-[.28em] text-white">KIA</button><div class="hidden items-center gap-7 text-sm text-neutral-300 sm:flex"><button onclick="scrollToId('about')" class="transition hover:text-white">Brend haqida</button><button onclick="scrollToId('models')" class="transition hover:text-white">Modellar</button><button onclick="scrollToId('footer')" class="transition hover:text-white">Kontakt</button></div></div></nav>
+<main>
+<section id="top" class="relative h-screen w-full overflow-hidden bg-black"><div id="heroSlides"></div><div class="relative z-10 flex h-full flex-col items-center justify-center px-4 pt-16 text-center"><h1 class="text-6xl font-extrabold tracking-[.3em] text-white sm:text-7xl md:text-8xl lg:text-9xl" style="animation:fadeInDown 1s ease-out">KIA</h1><p class="mt-4 text-lg font-light tracking-widest text-white/90 sm:text-xl md:text-2xl" style="animation:fadeInUp 1s ease-out .3s both">Harakat ilhomlantiradi</p><button onclick="scrollToId('models')" class="mt-10 rounded-full border border-white/30 bg-white/10 px-8 py-3.5 text-sm font-medium tracking-wider text-white backdrop-blur-md transition-all duration-300 hover:border-red-700 hover:bg-red-800/80 sm:mt-12 sm:px-10 sm:py-4 sm:text-base" style="animation:fadeInUp 1s ease-out .6s both">Avtomobillarni ko‘rish</button></div><div class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"><button onclick="scrollToId('models')" class="flex flex-col items-center gap-2 text-white/60 transition-colors hover:text-white" aria-label="Pastga o‘tish"><span class="text-[10px] uppercase tracking-widest">Pastga</span><i data-lucide="chevron-down" class="h-5 w-5 animate-bounce"></i></button></div><div id="heroDots" class="absolute bottom-8 right-6 z-10 hidden gap-2 sm:flex"></div></section>
+<section id="about" class="relative bg-neutral-950 px-4 py-20 sm:py-28"><div class="mx-auto max-w-3xl text-center"><span class="inline-block text-xs font-semibold uppercase tracking-[.3em] text-red-600">Brend haqida</span><h2 class="mt-4 text-3xl font-bold text-white sm:text-4xl md:text-5xl">KIA haqida</h2><div class="mx-auto mt-6 h-px w-20 bg-red-700"></div><p class="mt-8 text-base leading-relaxed text-neutral-300 sm:text-lg md:text-xl">Kia — zamonaviy dizayn, ilg‘or texnologiyalar, qulaylik va innovatsion elektr avtomobillari bilan tanilgan xalqaro avtomobil brendi.</p><div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3"><div class="rounded-2xl border border-neutral-800 bg-neutral-900/70 p-6"><i data-lucide="sparkles" class="mx-auto h-6 w-6 text-red-500"></i><h3 class="mt-4 font-semibold text-white">Zamonaviy dizayn</h3><p class="mt-2 text-sm text-neutral-400">Har bir modelda o‘ziga xos ko‘rinish.</p></div><div class="rounded-2xl border border-neutral-800 bg-neutral-900/70 p-6"><i data-lucide="cpu" class="mx-auto h-6 w-6 text-red-500"></i><h3 class="mt-4 font-semibold text-white">Ilg‘or texnologiya</h3><p class="mt-2 text-sm text-neutral-400">Qulaylik va aqlli yechimlar uyg‘unligi.</p></div><div class="rounded-2xl border border-neutral-800 bg-neutral-900/70 p-6"><i data-lucide="zap" class="mx-auto h-6 w-6 text-red-500"></i><h3 class="mt-4 font-semibold text-white">Elektr kelajak</h3><p class="mt-2 text-sm text-neutral-400">Elektr modellar bilan yangi harakat.</p></div></div></div></section>
+<section id="models" class="bg-neutral-950 px-4 py-20 sm:py-28"><div class="mx-auto max-w-7xl"><div class="text-center"><span class="inline-block text-xs font-semibold uppercase tracking-[.3em] text-red-600">Katalog</span><h2 class="mt-4 text-3xl font-bold text-white sm:text-4xl md:text-5xl">KIA avtomobillari</h2><div class="mx-auto mt-6 h-px w-20 bg-red-700"></div></div><div id="filters" class="mt-12 flex flex-wrap items-center justify-center gap-3"></div><div id="carGrid" class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"></div></div></section>
+</main>
+<footer id="footer" class="border-t border-neutral-800 bg-neutral-950 px-4 py-12"><div class="mx-auto max-w-4xl text-center"><h3 class="text-3xl font-extrabold tracking-[.25em] text-white sm:text-4xl">KIA</h3><p class="mt-4 text-sm text-neutral-400 sm:text-base">Zamonaviy avtomobillar. Zamonaviy harakat.</p><div class="mx-auto mt-8 h-px w-16 bg-neutral-800"></div><div class="mt-8 flex flex-wrap justify-center gap-5 text-xs text-neutral-500"><button onclick="scrollToId('about')" class="hover:text-white">Brend haqida</button><button onclick="scrollToId('models')" class="hover:text-white">Modellar</button><button onclick="scrollToTop()" class="hover:text-white">Yuqoriga</button></div><p class="mt-8 text-xs text-neutral-500 sm:text-sm">Barcha huquqlar himoyalangan.</p></div></footer>
+<div id="modalRoot" class="hidden fixed inset-0 z-50 items-center justify-center overflow-y-auto bg-black/80 p-4 backdrop-blur-sm" onclick="closeModal(event)"></div>
+<script>
+const heroImages=['https://images.pexels.com/photos/31477088/pexels-photo-31477088.jpeg?auto=compress&cs=tinysrgb&w=1920','https://images.pexels.com/photos/16673550/pexels-photo-16673550.jpeg?auto=compress&cs=tinysrgb&w=1920','https://images.pexels.com/photos/27286179/pexels-photo-27286179.jpeg?auto=compress&cs=tinysrgb&w=1920','https://images.pexels.com/photos/13331881/pexels-photo-13331881.jpeg?auto=compress&cs=tinysrgb&w=1920','https://images.pexels.com/photos/9714429/pexels-photo-9714429.jpeg?auto=compress&cs=tinysrgb&w=1920'];
+const cars = [
+  {
+    id: 1,
+    name: 'Sportage',
+    category: ['SUV'],
+    type: 'Yo‘ltanlama',
+    price: '330 000 000',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/27286179/pexels-photo-27286179.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Zamonaviy dizayn va kuchli xarakterga ega o‘rta hajmli yo‘ltanlama. Har kuni haydash uchun qulay va ishonchli.',
+    engine: '1.6T / 2.0L benzin',
+    horsepower: '150–180 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 2,
+    name: 'Sorento',
+    category: ['SUV', 'Oilaviy'],
+    type: 'Yo‘ltanlama',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/9714429/pexels-photo-9714429.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: '7 kishilik oilaviy yo‘ltanlama. Keng saloni va kuchli dvigateli bilan uzoq sayohatlar uchun ideal.',
+    engine: '2.2L dizel / 2.5T benzin',
+    horsepower: '191–281 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 3,
+    name: 'Seltos',
+    category: ['SUV'],
+    type: 'Yo‘ltanlama',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/13061032/pexels-photo-13061032.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Ixcham yo‘ltanlama bo‘lib, shahar va offroud sharoitida birdek yaxshi ko‘rsatkich beradi.',
+    engine: '1.5L / 1.4T benzin',
+    horsepower: '140–138 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 4,
+    name: 'Telluride',
+    category: ['SUV', 'Oilaviy'],
+    type: 'Yo‘ltanlama',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/11822722/pexels-photo-11822722.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: '8 kishilik flagman yo‘ltanlama. premium ichki makon va kuchli V6 dvigatel bilan jihozlangan.',
+    engine: '3.8L V6 benzin',
+    horsepower: '291 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 5,
+    name: 'Carnival',
+    category: ['Oilaviy', 'SUV'],
+    type: 'Miniven',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/7290399/pexels-photo-7290399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: '8 kishilik zamonaviy miniven. Keng va qulay saloni bilan oilaviy sayohatlar uchun mukammal yechim.',
+    engine: '2.2L dizel / 3.5L V6',
+    horsepower: '202–290 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 6,
+    name: 'K5',
+    category: ['Sedan'],
+    type: 'Sedan',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/27639321/pexels-photo-27639321.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Dinamik va nafis sedan. Sport ko‘rinishi va ilg‘or texnologiyalari bilan e‘tibor tortadi.',
+    engine: '1.6T / 2.5L benzin',
+    horsepower: '180–290 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 7,
+    name: 'K8',
+    category: ['Sedan'],
+    type: 'Premium sedan',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/11194878/pexels-photo-11194878.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Premium klass sedan. nafis dizayn, hashamatli ichki makon va silliq yurish xususiyati.',
+    engine: '2.5L / 3.5L V6 benzin',
+    horsepower: '198–300 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 8,
+    name: 'K9',
+    category: ['Sedan'],
+    type: 'Premium sedan',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/13331881/pexels-photo-13331881.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Flagman sedan. eng yuqori darajadagi hashamat, rivojlangan texnologiyalar va V6 dvigatel.',
+    engine: '3.5L V6 benzin',
+    horsepower: '296–365 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 9,
+    name: 'EV6',
+    category: ['Elektr', 'SUV'],
+    type: 'Elektr krossover',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/31477088/pexels-photo-31477088.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'To‘liq elektr krossover. tez zaryadlash, uzoq yurish masofasi va sport ko‘rinishi.',
+    engine: 'Elektr dvigatel (dual motor)',
+    horsepower: '167–320 ot kuchi',
+    range: '475 km gacha',
+  },
+  {
+    id: 10,
+    name: 'EV9',
+    category: ['Elektr', 'SUV', 'Oilaviy'],
+    type: 'Elektr yo‘ltanlama',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/16673550/pexels-photo-16673550.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: '7 kishilik elektr flagman yo‘ltanlama. keng saloni va kuchli elektr tizimi bilan ajralib turadi.',
+    engine: 'Elektr dvigatel (dual motor)',
+    horsepower: '215–379 ot kuchi',
+    range: '512 km gacha',
+  },
+  {
+    id: 11,
+    name: 'EV5',
+    category: ['Elektr', 'SUV'],
+    type: 'Elektr krossover',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/37467077/pexels-photo-37467077.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'O‘rta hajmli elektr krossover. zamonaviy dizayn va amaliy ichki makon bilan jihozlangan.',
+    engine: 'Elektr dvigatel',
+    horsepower: '215–320 ot kuchi',
+    range: '460 km gacha',
+  },
+  {
+    id: 12,
+    name: 'EV3',
+    category: ['Elektr', 'SUV'],
+    type: 'Elektr ixcham krossover',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/26966857/pexels-photo-26966857.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Ixcham elektr krossover. shahar hayoti uchun ideal — tezkor, qulay va ekologik toza.',
+    engine: 'Elektr dvigatel',
+    horsepower: '201 ot kuchi',
+    range: '436 km gacha',
+  },
+  {
+    id: 13,
+    name: 'Niro',
+    category: ['Elektr', 'SUV'],
+    type: 'Gibrid krossover',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/11320632/pexels-photo-11320632.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Gibrid, plag-in gibrid va elektr versiyalari mavjud. yoqilg‘i tejaligi va ekologik tozalik.',
+    engine: '1.6L gibrid / Elektr',
+    horsepower: '139–201 ot kuchi',
+    range: '460 km gacha (elektr)',
+  },
+  {
+    id: 14,
+    name: 'Sonet',
+    category: ['SUV'],
+    type: 'Ixcham yo‘ltanlama',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/14999411/pexels-photo-14999411.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Shahar uchun ixcham yo‘ltanlama. ixcham o‘lchamlari va zamonaviy texnologiyalari bilan qulay.',
+    engine: '1.2L / 1.0T / 1.5L benzin',
+    horsepower: '83–120 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 15,
+    name: 'Picanto',
+    category: ['Sedan'],
+    type: 'Shahar avtomobili',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/20475125/pexels-photo-20475125.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Shahar avtomobili. ixcham, tejamkor va parkovka uchun qulay.',
+    engine: '1.0L / 1.2L benzin',
+    horsepower: '66–84 ot kuchi',
+    range: '—',
+  },
+  {
+    id: 16,
+    name: 'XCeed',
+    category: ['SUV'],
+    type: 'Krossover',
+    price: 'So‘rov asosida',
+    priceOnRequest: true,
+    image: 'https://images.pexels.com/photos/29057708/pexels-photo-29057708.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Krossover ko‘rinishidagi hatchback. sport ko‘rinishi va balandroq pozitsiyasi bilan ajralib turadi.',
+    engine: '1.0T / 1.5T / 1.6L gibrid',
+    horsepower: '120–141 ot kuchi',
+    range: '—',
+  },
+];
+
+const filters=[['all','Barchasi'],['SUV','Yo‘ltanlamas'],['Sedan','Sedan'],['Elektr','Elektr'],['Oilaviy','Oilaviy']];let currentHero=0,activeFilter='all',selectedCar=null,heroTimer=null;
+function scrollToId(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
+function renderHero(){const slides=document.getElementById('heroSlides');slides.innerHTML=heroImages.map((img,i)=>'<div class="absolute inset-0 hero-slide" style="opacity:'+(i===currentHero?1:0)+';transform:scale('+(i===currentHero?1.05:1)+')"><img src="'+img+'" alt="KIA avtomobil" class="h-full w-full object-cover" loading="'+(i===0?'eager':'lazy')+'"><div class="absolute inset-0 hero-vignette"></div></div>').join('');document.getElementById('heroDots').innerHTML=heroImages.map((_,i)=>'<button onclick="setHero('+i+')" class="h-1 rounded-full transition-all duration-500 '+(i===currentHero?'w-10 bg-red-600':'w-4 bg-white/40')+'" aria-label="Rasm '+(i+1)+'"></button>').join('');lucide.createIcons()}
+function setHero(i){currentHero=i;renderHero()}function startHero(){heroTimer=setInterval(()=>setHero((currentHero+1)%heroImages.length),5000)}
+function renderFilters(){document.getElementById('filters').innerHTML=filters.map(([key,label])=>'<button onclick="setFilter(\''+key+'\')" class="rounded-full px-6 py-2.5 text-sm font-medium tracking-wide transition-all duration-300 '+(activeFilter===key?'bg-red-800 text-white shadow-lg shadow-red-950/40':'border border-neutral-800 bg-neutral-900 text-neutral-400 hover:border-neutral-700 hover:text-white')+'">'+label+'</button>').join('')}
+function setFilter(key){activeFilter=key;renderFilters();renderCars()}
+function renderCars(){const list=activeFilter==='all'?cars:cars.filter(car=>car.category.includes(activeFilter));document.getElementById('carGrid').innerHTML=list.map((car,i)=>'<article class="car-card group relative cursor-pointer overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 transition-all duration-500 hover:border-neutral-700 hover:shadow-2xl hover:shadow-red-950/30" style="animation-delay:'+(i*.06)+'s" onclick="openModal('+car.id+')"><div class="relative aspect-[4/3] overflow-hidden"><img src="'+car.image+'" alt="'+car.name+'" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy"><div class="absolute inset-0 card-image-overlay"></div><div class="absolute left-4 top-4 flex flex-wrap gap-2">'+car.category.map(cat=>'<span class="rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-white/80 backdrop-blur-sm">'+cat+'</span>').join('')+'</div></div><div class="p-5 sm:p-6"><div class="flex items-start justify-between"><div><h3 class="text-xl font-bold text-white sm:text-2xl">'+car.name+'</h3><p class="mt-1 text-sm text-neutral-400">'+car.type+'</p></div><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-neutral-700 text-neutral-400 transition-all duration-300 group-hover:border-red-700 group-hover:bg-red-800/40 group-hover:text-white"><i data-lucide="arrow-up-right" class="h-4 w-4"></i></span></div><p class="mt-3 line-clamp-2 text-sm leading-relaxed text-neutral-400">'+car.description+'</p><div class="mt-5 flex items-center justify-between border-t border-neutral-800 pt-4"><div><p class="text-[10px] uppercase tracking-wider text-neutral-500">Narxi</p><p class="mt-0.5 text-sm font-semibold text-neutral-300">'+car.price+'</p></div><button onclick="event.stopPropagation();openModal('+car.id+')" class="text-xs font-medium uppercase tracking-wider text-red-500 transition-colors hover:text-red-400">Model haqida</button></div></div></article>').join('');lucide.createIcons()}
+function openModal(id){selectedCar=cars.find(c=>c.id===id);if(!selectedCar)return;const c=selectedCar,root=document.getElementById('modalRoot');root.classList.remove('hidden');root.classList.add('flex');document.body.style.overflow='hidden';root.innerHTML='<div class="modal-in relative my-auto w-full max-w-4xl overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 shadow-2xl" onclick="event.stopPropagation()"><button onclick="closeModal()" class="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:bg-red-800" aria-label="Yopish"><i data-lucide="x" class="h-5 w-5"></i></button><div class="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9]"><img src="'+c.image+'" alt="'+c.name+'" class="h-full w-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/20 to-transparent"></div><div class="absolute bottom-0 left-0 p-6 sm:p-8"><div class="mb-3 flex flex-wrap gap-2">'+c.category.map(cat=>'<span class="rounded-full bg-red-800/80 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-white backdrop-blur-sm">'+cat+'</span>').join('')+'</div><h2 class="text-3xl font-bold text-white sm:text-4xl">'+c.name+'</h2></div></div><div class="modal-scroll max-h-[55vh] overflow-y-auto p-6 sm:p-8"><div class="mb-6 flex items-center justify-between border-b border-neutral-800 pb-6"><div><p class="text-[10px] uppercase tracking-wider text-neutral-500">Narxi</p><p class="mt-1 text-lg font-semibold text-neutral-300">'+c.price+'</p></div></div><div class="grid grid-cols-1 gap-4 sm:grid-cols-2">'+[['gauge','Dvigatel / tizim',c.engine],['activity','Ot kuchi',c.horsepower],['battery','Yurish masofasi',c.range],['zap','Avtomobil turi',c.type]].map(s=>'<div class="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-950/50 p-4"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red-900/30 text-red-500"><i data-lucide="'+s[0]+'" class="h-4 w-4"></i></span><div><p class="text-[10px] uppercase tracking-wider text-neutral-500">'+s[1]+'</p><p class="mt-0.5 text-sm font-medium text-white">'+s[2]+'</p></div></div>').join('')+'</div><div class="mt-6 rounded-xl border border-neutral-800 bg-neutral-950/50 p-5"><h4 class="text-xs font-semibold uppercase tracking-wider text-red-500">Qisqa tavsif</h4><p class="mt-2 text-sm leading-relaxed text-neutral-300">'+c.description+'</p></div></div></div>';lucide.createIcons()}
+function closeModal(e){if(e&&e.target!==e.currentTarget)return;const root=document.getElementById('modalRoot');root.classList.add('hidden');root.classList.remove('flex');root.innerHTML='';document.body.style.overflow='';selectedCar=null}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});let lastScroll=0;window.addEventListener('scroll',()=>{const nav=document.getElementById('navbar'),y=window.scrollY;nav.style.transform=(y>lastScroll&&y>120)?'translateY(-100%)':'translateY(0)';lastScroll=y},{passive:true});
+renderHero();renderFilters();renderCars();lucide.createIcons();startHero();
+</script></body></html>
